@@ -45,7 +45,9 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	document.write(__webpack_require__(5));
+	var component = __webpack_require__(5);
+
+	document.body.appendChild(component());
 
 /***/ },
 /* 1 */
@@ -63,8 +65,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./node_modules/css-loader/index.js!./style.css", function() {
-				var newContent = require("!!./node_modules/css-loader/index.js!./style.css");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./style.css", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./style.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -82,7 +84,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background-color: grey;\n}", ""]);
+	exports.push([module.id, "body {\n  background-color: #242424;\n  color: #fff;\n}", ""]);
 
 	// exports
 
@@ -401,7 +403,11 @@
 /* 5 */
 /***/ function(module, exports) {
 
-	module.exports = 'It works from contentjs!';
+	module.exports = function() {
+	  var ele = document.createElement('h1');
+	  ele.innerHTML = 'Hello world! from component.js';
+	  return ele;
+	};
 
 /***/ }
 /******/ ]);
