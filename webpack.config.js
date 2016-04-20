@@ -1,16 +1,19 @@
-var path = require( 'path' );
-var htmlPlugin = require( 'html-webpack-plugin' );
+var path = require('path');
+var HtmlPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve( __dirname, 'app/main.js' ),
+  entry: path.resolve(__dirname, 'app/main.js'),
   output: {
-    path: path.resolve( __dirname, 'build' ),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, 'build'),
+    filename: 'bundle.js',
   },
-  plugins: [ new htmlPlugin() ],
+  plugins: [new HtmlPlugin()],
   module: {
     loaders: [
-      { test: /\.css$/, loader: 'style!css' }
-    ]
-  }
+      {
+        test: /\.css$/,
+        loader: 'style!css',
+      },
+    ],
+  },
 };
