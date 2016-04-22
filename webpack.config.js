@@ -7,12 +7,24 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
   },
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+  },
   plugins: [new HtmlPlugin()],
   module: {
     loaders: [
       {
         test: /\.css$/,
         loader: 'style!css',
+      },
+      {
+        test: /\.scss$/,
+        loader: 'sass-loader',
+      },
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loaders: ['babel?cacheDirectory'],
       },
     ],
   },
