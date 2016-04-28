@@ -1,5 +1,4 @@
-require('./style.css');
-require('!style!css!sass!./example-sass.scss');
+require('../styles/style.css');
 
 var component = require('./example-component.js');
 document.body.appendChild(component());

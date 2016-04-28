@@ -1,14 +1,19 @@
-# going over some webpack from scratch again
+# tja webpack from scratch
 
-## non final readme tings:
+## stuff it got:
+- usual webpack stuff
+- webpack-dev-server
+- postcss (autoprefixer + various features to match sass)
+- htmlplugin
 
 ### go:
 - clone
-- npm i webpack -g
-- npm i webpack-dev-server -g
+- npm i
 
 ### cmds:
-- webpack
-- webpack-dev-server / npm run wds
+- npm start: starts a webpack-dev-server, inline, HMR etc
+- npm run prod: sends a min'd production build to ./build/
 
-package.json full of extra shite for now til this goes to vue/react branches or suttin
+### future branches probably
+- react
+- vue.js
