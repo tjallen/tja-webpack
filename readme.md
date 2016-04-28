@@ -2,6 +2,7 @@
 
 ## stuff it got:
 - usual webpack stuff
+- delicious babel for es6 transpiling
 - webpack-dev-server
 - postcss (autoprefixer + various features to match sass)
 - htmlplugin
