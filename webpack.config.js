@@ -12,7 +12,10 @@ module.exports = {
     extensions: ['', '.js', '.jsx'],
   },
   plugins: [
-    new HtmlPlugin(),
+    new HtmlPlugin({
+      title: 'eyyy a custom title!',
+      template: 'app/index.hbs',
+    }),
     new CleanWebpackPlugin(['build/*'], {
       verbose: true, 
       dry: false
@@ -30,6 +33,10 @@ module.exports = {
         exclude: /node_modules/,
         loaders: ['babel?cacheDirectory'],
       },
+      {
+        test: /\.hbs$/,
+        loader: 'handlebars-loader',
+      }
     ],
   },
   postcss: function () {
