@@ -1,11 +1,12 @@
 # tja webpack from scratch
 
-## stuff it got:
+## it got:
 - usual webpack stuff
-- delicious babel for es6 transpiling
+- delicious babel for es6+ transpiling
 - webpack-dev-server
 - postcss (autoprefixer + various features to match sass)
-- htmlplugin
+- htmlplugin w/ handlebars template to build index.html
+- eslint
 
 ### go:
 - clone
@@ -15,6 +16,10 @@
 - npm start: starts a webpack-dev-server, inline, HMR etc
 - npm run prod: sends a min'd production build to ./build/
 
-### future branches probably
-- react
-- vue.js
+### current branches
+- master: roughly react oriented
+
+### probable future branches
+- master: generic app / static site
+- react branch
+- vue.js branch
