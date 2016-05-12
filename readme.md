@@ -1,11 +1,13 @@
-# tja webpack from scratch
+# tja current webpack setup
 
-it got:
-- usual webpack stuff
-- delicious babel for es6+ transpiling
-- webpack-dev-server
-- postcss (autoprefixer + various features to match sass)
-- htmlplugin w/ handlebars template to build index.html
+this is how i've been building web apps recently. if youre reading this a) damn son how u find this and b) you prob wanna go use [this](https://github.com/gaearon/react-hot-boilerplate) or similar instead.
+
+its got:
+- webpack
+- babel
+- webpack-dev-server with HMR and react-hot-loader
+- postcss modules (autoprefixer, various basic features from sass)
+- htmlplugin w/ handlebars template if you want to build a custom index.html
 - eslint
 
 ---
@@ -16,14 +18,5 @@ go:
 
 cmds:
 - `npm start`: starts a webpack-dev-server, inline, HMR etc
-- `npm run prod`: sends a min'd production build to ./build/
+- `npm run prod`: 1. EMPTIES ./BUILD/ DIRECTORY 2. sends a min'd production build there
 
----
-
-current branches
-- master: currently react based
-
-probable future branches
-- master: generic app / static site
-- react branch
-- vue.js branch
