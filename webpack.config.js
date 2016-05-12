@@ -1,10 +1,13 @@
+var webpack = require('webpack');
 var path = require('path');
 var HtmlPlugin = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: [
-    path.resolve(__dirname, 'app/scripts/index.js'),
+    'webpack/hot/only-dev-server',
+    'webpack-dev-server/client?http://localhost:8080',
+    './app/scripts/index.js',
   ],
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -14,6 +17,7 @@ module.exports = {
     extensions: ['', '.js', '.jsx'],
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new HtmlPlugin({
       title: 'eyyy a custom title!',
       template: 'app/index.hbs',
@@ -33,7 +37,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ['babel?cacheDirectory'],
+        loaders: ['react-hot', 'babel?cacheDirectory'],
       },
       {
         test: /\.hbs$/,
