@@ -4,6 +4,19 @@ body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
+/* sample for testing sass syntax - delete me
+$foo: orange;
+
+html {
+  body {
+    h1 {
+      background-color: $foo;
+    }
+  }
+}
+
+*/
+
 /* sample for testing postcss modules - delete me
 
 .example {

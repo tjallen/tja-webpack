@@ -1,5 +1,5 @@
-// global postcss. tdo future maybe css modules instead?
-require('../styles/style.css');
+// global postcss
+require('../styles/style.scss');
 
 import React from 'react';
 import ReactDOM from 'react-dom';
