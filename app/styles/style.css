@@ -1,10 +1,10 @@
 body {
-  background-color: grey;
-  color: #fff;
-  h1 {
-    background-color: red;;
-  }
+  background-color: #eee;
+  color: #242424;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
+
+/* sample for testing postcss modules - delete me
 
 .example {
     display: flex;
@@ -27,3 +27,5 @@ body {
         display: block;
     }
 }
+
+end sample */ 
