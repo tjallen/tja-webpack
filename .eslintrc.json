@@ -8,9 +8,7 @@
       }
     },
     "rules": {
-      "strict": 0,
-      "react/no-multi-comp": 0,
-      "react/prefer-stateless-function": 0
+      "strict": 0
     },
     "plugins": [
         "react"
