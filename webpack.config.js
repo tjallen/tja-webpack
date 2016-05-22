@@ -5,9 +5,7 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: [
-    'webpack/hot/only-dev-server',
-    'webpack-dev-server/client?http://localhost:8080',
-    './app/scripts/index.js',
+    path.resolve(__dirname, 'app/scripts/index.js'),
   ],
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -17,7 +15,6 @@ module.exports = {
     extensions: ['', '.js', '.jsx'],
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlPlugin({
       title: 'eyyy a custom title!',
       template: 'app/index.hbs',
