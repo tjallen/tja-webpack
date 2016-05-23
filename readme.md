@@ -17,6 +17,5 @@ go:
 - `npm i`
 
 cmds:
-- `npm start`: runs node/webpack-dev-server at `http://localhost:8080/` with HMR. find+replace `8080` in webpack.config.js and server.js to change port
-- `npm run prod`: 1. EMPTIES ./BUILD/ DIRECTORY 2. sends a min'd production build there
-
+- `npm start`: runs `webpack-dev-server --inline --hot` at `http://localhost:8080/`
+- `npm run prod`: 1. EMPTIES ./BUILD/ DIRECTORY 2. sends a minified production build there
