@@ -16,15 +16,15 @@ module.exports = {
   },
   plugins: [
     new HtmlPlugin({
-      title: 'eyyy a custom title!',
+      title: 'My app title',
+      description: 'My app description',
       template: 'app/index.hbs',
     }),
     new CleanWebpackPlugin(['build/*'], {
-      verbose: true, 
-      dry: false
-    })
+      verbose: true,
+      dry: false,
+    }),
   ],
-  
   module: {
     loaders: [
       {
@@ -43,7 +43,7 @@ module.exports = {
       {
         test: /\.hbs$/,
         loader: 'handlebars-loader',
-      }
+      },
     ],
   },
   postcss: function () {
