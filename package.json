@@ -5,6 +5,7 @@
   "main": "webpack.config.js",
   "dependencies": {
     "babel-runtime": "^6.6.1",
+    "normalize.css": "^4.1.1",
     "react": "^15.0.1",
     "react-dom": "^15.0.1"
   },

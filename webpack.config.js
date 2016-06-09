@@ -5,11 +5,11 @@ var CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
   entry: [
-    path.resolve(__dirname, 'app/scripts/index.js'),
+    path.resolve(__dirname, 'src/index.js'),
   ],
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'scripts/bundle.js',
+    filename: 'bundle.js',
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
@@ -18,7 +18,7 @@ module.exports = {
     new HtmlPlugin({
       title: 'My app title',
       description: 'My app description',
-      template: 'app/index.hbs',
+      template: 'src/index.hbs',
     }),
     new CleanWebpackPlugin(['build/*'], {
       verbose: true,
@@ -29,11 +29,11 @@ module.exports = {
     loaders: [
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader!postcss-loader',
+        loader: 'style-loader!css-loader?modules!postcss-loader',
       },
       {
         test: /\.scss$/,
-        loader: 'style-loader!css-loader!postcss-loader',
+        loader: 'style-loader!css-loader?modules!postcss-loader',
       },
       {
         test: /\.jsx?$/,

@@ -6,9 +6,9 @@ its got:
 - webpack
 - babel
 - webpack-dev-server with HMR and react-hot-loader
-- postcss modules (autoprefixer, various basic features from sass)
+- css modules (w/ decent sass/postcss compatibility, autoprefixer, etc)
 - htmlplugin w/ handlebars template if you want to build a custom index.html
-- eslint
+- eslint (airbnb default)
 
 ---
 

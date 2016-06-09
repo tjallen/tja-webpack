@@ -1,0 +1,30 @@
+// example css module
+
+// todo: work out why first rule doesnt always apply
+.firststyle {
+  color: black;
+  border: 3px solid black;
+}
+
+.red {
+  color: red;
+  border-bottom: 3px solid red;
+}
+
+.green {
+  color: green;
+  border-bottom: 3px solid green;
+}
+
+.blue {
+  color: blue;
+  border-bottom: 3px solid blue;
+}
+
+.some {
+  .nested {
+    .shite {
+      border: 1px solid black;
+    }
+  }
+}
