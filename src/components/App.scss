@@ -1,7 +1,8 @@
-// example css module
+* {
+  padding: 10px;
+}
 
-// todo: work out why first rule doesnt always apply
-.firststyle {
+.root {
   color: black;
   border: 3px solid black;
 }
@@ -24,7 +25,8 @@
 .some {
   .nested {
     .shite {
-      border: 1px solid black;
+      background-color: purple;
+      color: #fff;
     }
   }
 }
