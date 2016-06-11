@@ -5,7 +5,7 @@ import styles from './App.scss';
 export default class App extends Component {
   render() {
     return (
-      <div className={styles.root}>
+      <div className={styles.container}>
         <h1>Hello world, from React</h1>
         <p className={styles.red}>red</p>
         <p className={styles.green}>green</p>

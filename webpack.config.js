@@ -1,3 +1,6 @@
+/* eslint-env es6:false */
+/* eslint-disable no-var, global-require, object-shorthand, func-names */
+
 var webpack = require('webpack');
 var path = require('path');
 var HtmlPlugin = require('html-webpack-plugin');
@@ -28,11 +31,7 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader?modules!postcss-loader',
-      },
-      {
-        test: /\.scss$/,
+        test: /\.(css|scss|pcss)$/,
         loader: 'style-loader!css-loader?modules!postcss-loader',
       },
       {
@@ -46,14 +45,19 @@ module.exports = {
       },
     ],
   },
-  postcss: function () {
+  postcss: function (webpack) {
     return [
-      require('autoprefixer'), 
-      require('postcss-import'),
+      require('postcss-import')({ addDependencyTo: webpack }),
+      require('postcss-url'),
+      require('postcss-cssnext'),
+      // plugins
       require('postcss-simple-vars'),
       require('postcss-extend'),
       require('postcss-nested'),
       require('postcss-mixins'),
+      // reporting
+      require('postcss-browser-reporter'),
+      require('postcss-reporter'),
     ];
   }
 };

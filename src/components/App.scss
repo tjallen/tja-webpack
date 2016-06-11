@@ -1,12 +1,23 @@
-/* sample css module */
+/* sample css module w/ some postcss-cssnext shite */
+
+/* sass-style variable from postcss-simple-variables */
+$foo: yellow;
+
+:root {
+  --myVar: rebeccapurple;
+  --fontSize: 1rem;
+}
 
 * {
   padding: 10px;
 }
 
-.root {
-  color: black;
-  border: 3px solid black;
+.container {
+  color: var(--myVar);
+  border: 3px solid $foo;
+  h1 {
+    font-size: calc(var(--fontSize) * 2);
+  }
 }
 
 .red {
