@@ -19,3 +19,10 @@ go:
 cmds:
 - `npm start`: runs `webpack-dev-server --inline --hot` at `http://localhost:8080/`
 - `npm run prod`: 1. EMPTIES ./BUILD/ DIRECTORY 2. sends a minified production build there
+
+---
+
+future prob/possibilities for return mebbe
+- react-css-modules if/when standard modules get annoying
+- some kinda grid
+- svg, img spriting
