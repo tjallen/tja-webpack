@@ -9,8 +9,6 @@ import App from './components/App';
 const rootElement = document.getElementById('app');
 
 ReactDOM.render(
-  <main>
-    <App />
-  </main>,
+  <App />,
   rootElement
 );
