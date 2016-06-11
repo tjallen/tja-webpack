@@ -6,7 +6,7 @@ its got:
 - webpack
 - babel
 - webpack-dev-server with HMR and react-hot-loader
-- css modules (w/ decent sass/postcss compatibility, autoprefixer, etc)
+- css modules (using postcss+cssnext, various postcss plugins)
 - htmlplugin w/ handlebars template if you want to build a custom index.html
 - eslint (airbnb default)
 
@@ -19,3 +19,10 @@ go:
 cmds:
 - `npm start`: runs `webpack-dev-server --inline --hot` at `http://localhost:8080/`
 - `npm run prod`: 1. EMPTIES ./BUILD/ DIRECTORY 2. sends a minified production build there
+
+---
+
+future prob/possibilities for return mebbe
+- react-css-modules if/when standard modules get annoying
+- some kinda grid
+- svg, img spriting
