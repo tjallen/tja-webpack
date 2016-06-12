@@ -1,24 +1,27 @@
-/* eslint-env es6:false */
-/* eslint-disable no-var, global-require, object-shorthand, func-names */
+import webpack from 'webpack';
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import CleanWebpackPlugin from 'clean-webpack-plugin';
 
-var webpack = require('webpack');
-var path = require('path');
-var HtmlPlugin = require('html-webpack-plugin');
-var CleanWebpackPlugin = require('clean-webpack-plugin');
+// cleaner paths
+const PATHS = {
+  src: path.join(__dirname, 'src'),
+  build: path.join(__dirname, 'build'),
+};
 
 module.exports = {
-  entry: [
-    path.resolve(__dirname, 'src/index.js'),
-  ],
+  entry: {
+    src: PATHS.src,
+  },
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: PATHS.build,
     filename: 'bundle.js',
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
   },
   plugins: [
-    new HtmlPlugin({
+    new HtmlWebpackPlugin({
       title: 'My app title',
       description: 'My app description',
       template: 'src/index.hbs',
@@ -45,7 +48,7 @@ module.exports = {
       },
     ],
   },
-  postcss: function (webpack) {
+  postcss() {
     return [
       require('postcss-import')({ addDependencyTo: webpack }),
       require('postcss-url'),
