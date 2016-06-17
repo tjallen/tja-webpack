@@ -2,11 +2,14 @@ import webpack from 'webpack';
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 // cleaner paths
 const PATHS = {
   src: path.join(__dirname, 'src'),
   build: path.join(__dirname, 'build'),
+  srcImages: path.join(__dirname, 'src/images'),
+  buildImages: path.join(__dirname, 'build/images'),
 };
 
 module.exports = {
@@ -26,10 +29,15 @@ module.exports = {
       description: 'My app description',
       template: 'src/index.hbs',
     }),
-    new CleanWebpackPlugin(['build/*'], {
+    new CleanWebpackPlugin([
+      PATHS.build,
+    ], {
       verbose: true,
-      dry: false,
+      dry: true,
     }),
+/*    new CopyWebpackPlugin([
+      { from: 'src/images', to: PATHS.buildImages },
+    ]),*/
   ],
   module: {
     loaders: [
@@ -45,6 +53,10 @@ module.exports = {
       {
         test: /\.hbs$/,
         loader: 'handlebars-loader',
+      },
+      {
+        test: /\.(png|gif|jpg|eot|woff|svg|ttf)$/,
+        loader: 'file?name=[path][name].[ext] '
       },
     ],
   },

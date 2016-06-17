@@ -10,6 +10,10 @@ export default class App extends Component {
         <p className={styles.red}>red</p>
         <p className={styles.green}>green</p>
         <p className={styles.blue}>blue</p>
+        <img src="../forgive.png" alt="" />
+        <img src="../jump.jpg" alt="" />
+        <img src="../images/forgive.png" alt="" />
+        <img src="../images/jump.jpg" alt="" />
         <div className={styles.some}>
           <div className={styles.nested}>
             <div className={styles.shite}>
