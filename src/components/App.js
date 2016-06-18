@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 // css modules
 import styles from './App.scss';
 
+import imgA from '../images/forgive.png';
+import imgB from '../images/jump.jpg';
+import imgTiny from '../images/tiny.jpg';
+
 export default class App extends Component {
   render() {
     return (
@@ -10,8 +14,9 @@ export default class App extends Component {
         <p className={styles.red}>red</p>
         <p className={styles.green}>green</p>
         <p className={styles.blue}>blue</p>
-        <img src="../forgive.png" alt="" />
-        <img src="../jump.jpg" alt="" />
+        <span>absolute:</span><img src="https://placeimg.com/200/200/any" />
+        <span>relative local:</span><img src="https://placeimg.com/200/200/any" />
+        <img src="images/forgive.png" />
         <img src="../images/forgive.png" alt="" />
         <img src="../images/jump.jpg" alt="" />
         <div className={styles.some}>
