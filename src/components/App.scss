@@ -30,21 +30,7 @@ img {
   border-bottom: 3px solid red;
 }
 
-.green {
-  color: green;
-  border-bottom: 3px solid green;
-}
-
 .blue {
   color: blue;
   border-bottom: 3px solid blue;
-}
-
-.some {
-  .nested {
-    .shite {
-      background-color: purple;
-      color: #fff;
-    }
-  }
 }
