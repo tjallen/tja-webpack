@@ -33,7 +33,7 @@ module.exports = {
       PATHS.build,
     ], {
       verbose: true,
-      dry: true,
+      dry: false,
     }),
 /*    new CopyWebpackPlugin([
       { from: 'src/images', to: PATHS.buildImages },
