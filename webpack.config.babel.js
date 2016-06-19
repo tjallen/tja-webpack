@@ -59,7 +59,7 @@ module.exports = {
       {
         test: /\.(png|gif|jpe?g|svg)$/,
         loaders: [
-          'url?limit=20000&name=images/[name][hash:6].[ext]',
+          'url?limit=5000&name=images/[name][hash:6].[ext]',
           'image-webpack',
         ],
       },
@@ -70,19 +70,19 @@ module.exports = {
     progressive: true,
     optimizationLevel: 7,
     interlaced: false,
-    pngquant:{
-      quality: "65-90",
-      speed: 4
+    pngquant: {
+      quality: '65-90',
+      speed: 4,
     },
-    svgo:{
+    svgo: {
       plugins: [
         {
-          removeViewBox: false
+          removeViewBox: false,
         },
         {
-          removeEmptyAttrs: false
-        }
-      ]
+          removeEmptyAttrs: false,
+        },
+      ],
     }
   },
   postcss() {
