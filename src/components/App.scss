@@ -12,6 +12,11 @@ $foo: yellow;
   padding: 10px;
 }
 
+img {
+  height: auto;
+  max-width: 200px;
+}
+
 .container {
   color: var(--myVar);
   border: 3px solid $foo;

@@ -59,7 +59,7 @@ module.exports = {
       {
         test: /\.(png|gif|jpe?g|svg)$/,
         loaders: [
-          'file?name=images/[name][hash:6].[ext]',
+          'url?limit=20000&name=images/[name][hash:6].[ext]',
           'image-webpack',
         ],
       },

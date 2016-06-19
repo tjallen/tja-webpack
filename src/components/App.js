@@ -14,19 +14,11 @@ export default class App extends Component {
         <p className={styles.red}>red</p>
         <p className={styles.green}>green</p>
         <p className={styles.blue}>blue</p>
-        <p>absolute remote:</p><img src="https://placeimg.com/200/200/any" alt="" />
-        <p>relative local:</p>
+        <p>some local imported images:</p>
         <img src={imgA} alt="" />
         <img src={imgB} alt="" />
-        <p>sub 20kb relative local for future base64 encoding</p>
+        <p>sub 20kb image that gets base64 encoded:</p>
         <img src={imgTiny} alt="" />
-        <div className={styles.some}>
-          <div className={styles.nested}>
-            <div className={styles.shite}>
-              <p>ey!</p>
-            </div>
-          </div>
-        </div>
       </div>
     );
   }

@@ -9,6 +9,7 @@ its got:
 - css modules (using postcss+cssnext, various postcss plugins)
 - htmlplugin w/ handlebars template if you want to build a custom index.html
 - eslint (airbnb default)
+- image minification
 
 ---
 
@@ -18,11 +19,10 @@ go:
 
 cmds:
 - `npm start`: runs `webpack-dev-server --inline --hot` at `http://localhost:8080/`
-- `npm run prod`: 1. EMPTIES ./BUILD/ DIRECTORY 2. sends a minified production build there
+- `npm run dist` (or build, or prod): 1. REMOVES ./dist/ DIRECTORY 2. sends a minified production build there
 
 ---
 
 future prob/possibilities for return mebbe
 - react-css-modules if/when standard modules get annoying
-- some kinda grid
-- svg, img spriting
+- some kinda grid - but flexbox prob ok for now
