@@ -55,7 +55,7 @@ module.exports = {
         loader: 'handlebars-loader',
       },
       {
-        test: /\.(png|gif|jpg|eot|woff|svg|ttf)$/,
+        test: /\.(png|gif|jpe?g|svg)$/,
         loader: 'file?name=images/[name][hash:6].[ext]',
       },
     ],
