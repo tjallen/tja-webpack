@@ -51,7 +51,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --inline --hot --colors",
-    "prod": "webpack --config webpack.config-production.babel.js -p"
+    "prod": "webpack --config webpack.config-production.babel.js -p",
+    "dist": "webpack --config webpack.config-production.babel.js -p",
+    "build": "webpack --config webpack.config-production.babel.js -p"
   },
   "author": "",
   "license": "ISC"

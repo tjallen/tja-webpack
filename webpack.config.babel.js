@@ -9,9 +9,9 @@ import CleanWebpackPlugin from 'clean-webpack-plugin';
 // cleaner paths
 const PATHS = {
   src: path.join(__dirname, 'src'),
-  build: path.join(__dirname, 'build'),
+  dist: path.join(__dirname, 'dist'),
   srcImages: path.join(__dirname, 'src/images'),
-  buildImages: path.join(__dirname, 'build/images'),
+  distImages: path.join(__dirname, 'dist/images'),
 };
 
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
     src: PATHS.src,
   },
   output: {
-    path: PATHS.build,
+    path: PATHS.dist,
     filename: 'bundle.js',
   },
   resolve: {
@@ -32,13 +32,13 @@ module.exports = {
       template: 'src/index.hbs',
     }),
     new CleanWebpackPlugin([
-      PATHS.build,
+      PATHS.dist,
     ], {
       verbose: true,
       dry: false,
     }),
 /*    new CopyWebpackPlugin([
-      { from: 'src/images', to: PATHS.buildImages },
+      { from: 'src/images', to: PATHS.distImages },
     ]),*/
   ],
   module: {
