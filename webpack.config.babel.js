@@ -1,8 +1,10 @@
+/* eslint-disable global-require, no-unused-vars */
+
 import webpack from 'webpack';
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
-import CopyWebpackPlugin from 'copy-webpack-plugin';
+// import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 // cleaner paths
 const PATHS = {
@@ -56,9 +58,32 @@ module.exports = {
       },
       {
         test: /\.(png|gif|jpe?g|svg)$/,
-        loader: 'file?name=images/[name][hash:6].[ext]',
+        loaders: [
+          'file?name=images/[name][hash:6].[ext]',
+          'image-webpack',
+        ],
       },
     ],
+  },
+  // image-webpack-loader options
+  imageWebpackLoader: {
+    progressive: true,
+    optimizationLevel: 7,
+    interlaced: false,
+    pngquant:{
+      quality: "65-90",
+      speed: 4
+    },
+    svgo:{
+      plugins: [
+        {
+          removeViewBox: false
+        },
+        {
+          removeEmptyAttrs: false
+        }
+      ]
+    }
   },
   postcss() {
     return [

@@ -14,9 +14,9 @@ export default class App extends Component {
         <p className={styles.red}>red</p>
         <p className={styles.green}>green</p>
         <p className={styles.blue}>blue</p>
-        <p>absolute remote:</p><img src="https://placeimg.com/200/200/any" />
+        <p>absolute remote:</p><img src="https://placeimg.com/200/200/any" alt="" />
         <p>relative local:</p>
-        <img src={imgA} />
+        <img src={imgA} alt="" />
         <img src={imgB} alt="" />
         <p>sub 20kb relative local for future base64 encoding</p>
         <img src={imgTiny} alt="" />
