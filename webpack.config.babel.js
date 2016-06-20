@@ -4,6 +4,7 @@ import webpack from 'webpack';
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
+import combineLoaders from 'webpack-combine-loaders';
 // import CopyWebpackPlugin from 'copy-webpack-plugin';
 
 // cleaner paths
@@ -50,7 +51,17 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ['react-hot', 'babel?cacheDirectory'],
+        loader: combineLoaders([
+          {
+            loader: 'react-hot',
+          },
+          {
+            loader: 'babel',
+            query: {
+              cacheDirectory: true,
+            },
+          },
+        ]),
       },
       {
         test: /\.hbs$/,
@@ -83,7 +94,7 @@ module.exports = {
           removeEmptyAttrs: false,
         },
       ],
-    }
+    },
   },
   postcss() {
     return [
