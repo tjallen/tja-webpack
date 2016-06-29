@@ -2,3 +2,4 @@ node_modules
 build/*
 dist/*
 stats.json
+npm-debug.log

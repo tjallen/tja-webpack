@@ -18,15 +18,23 @@ const PATHS = {
 module.exports = {
   entry: {
     src: PATHS.src,
+    vendor: [
+      'normalize.css',
+      'react',
+      'react-dom',
+    ],
   },
   output: {
     path: PATHS.dist,
-    filename: 'bundle.js',
+    filename: '[name].js',
   },
   resolve: {
     extensions: ['', '.js', '.jsx'],
+    // root: path.join(__dirname, 'node_modules'),
+    // modulesDirectories: ['node_modules'],
   },
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
     new HtmlWebpackPlugin({
       title: 'My app title',
       description: 'My app description',
@@ -59,6 +67,8 @@ module.exports = {
             loader: 'babel',
             query: {
               cacheDirectory: true,
+              presets: ['es2015', 'react', 'stage-1'],
+              plugins: ['transform-runtime', 'transform-class-properties'],
             },
           },
         ]),

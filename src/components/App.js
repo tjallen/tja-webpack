@@ -14,7 +14,7 @@ export default class App extends Component {
         <p className={styles.blue}>blue</p>
         <p>local imported image:</p>
         <img src={imgA} alt="" />
-        <p>sub 20kb image that gets base64 encoded:</p>
+        <p>sub 5kb image that gets base64 encoded:</p>
         <img src={imgTiny} alt="" />
       </div>
     );
