@@ -1,6 +1,6 @@
-# tja current webpack setup
+# tja current react + webpack setup (kinda outdated / in limbo)
 
-this is how i've been building web apps recently. if youre reading this a) damn son how u find this and b) you prob wanna go use [this](https://github.com/gaearon/react-hot-boilerplate) or similar instead.
+a rough starting point for building react web apps. if youre reading this a) damn son how u find this and b) you prob wanna go use [create-react-app](https://github.com/facebookincubator/create-react-app) or [react-boilerplate](https://github.com/mxstbr/react-boilerplate) instead.
 
 its got:
 - webpack
@@ -20,9 +20,3 @@ go:
 cmds:
 - `npm start`: runs `webpack-dev-server --inline --hot` at `http://localhost:8080/`
 - `npm run dist` (or build, or prod): 1. REMOVES ./dist/ DIRECTORY 2. sends a minified production build there
-
----
-
-future prob/possibilities for return mebbe
-- react-css-modules if/when standard modules get annoying
-- some kinda grid - but flexbox prob ok for now
